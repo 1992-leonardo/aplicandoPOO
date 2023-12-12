@@ -6,7 +6,7 @@ public class Episodio implements ClassificavelInterface {
 
     private int numero;
     private String nome;
-    private Serie serio;
+    private Serie serie;
     private int totalVisualisacoes;
 
     public int getNumero() {
@@ -25,12 +25,12 @@ public class Episodio implements ClassificavelInterface {
         this.nome = nome;
     }
 
-    public Serie getSerio() {
-        return serio;
+    public Serie getSerie() {
+        return serie;
     }
 
-    public void setSerio(Serie serio) {
-        this.serio = serio;
+    public void setSerie(Serie serie) {
+        this.serie = serie;
     }
 
     public int getTotalVisualisacoes() {
