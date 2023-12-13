@@ -1,11 +1,19 @@
 package com.br.aplicandoPOO.modelos;
 
-public class Serie extends Titulo{
-
+public class Serie extends Titulo {
     private int temporadas;
     private boolean ativa;
-    private int episodioTemporadas;
-    private int minutosTemporadas;
+    private int episodioTemporada;
+    private int minutoEpisodio;
+    private int minutosTemporada;
+
+    public int getMinutosTemporada() {
+        return minutosTemporada;
+    }
+
+    public void setMinutosTemporada(int minutosTemporada) {
+        this.minutosTemporada = minutosTemporada;
+    }
 
     public int getTemporadas() {
         return temporadas;
@@ -23,25 +31,28 @@ public class Serie extends Titulo{
         this.ativa = ativa;
     }
 
-    public int getEpisodioTemporadas() {
-        return episodioTemporadas;
+    public int getEpisodioTemporada() {
+        return episodioTemporada;
     }
 
-    public void setEpisodioTemporadas(int episodioTemporadas) {
-        this.episodioTemporadas = episodioTemporadas;
+    public void setEpisodioTemporada(int episodioTemporada) {
+        this.episodioTemporada = episodioTemporada;
     }
 
-    public int getMinutosTemporadas() {
-        return minutosTemporadas;
+    public int getMinutosEpisodio() {
+        return minutoEpisodio;
     }
 
-    public void setMinutosTemporadas(int minutosTemporadas) {
-        this.minutosTemporadas = minutosTemporadas;
+    public void setMinutosEpisodio(int minutosEpisodio) {
+        this.minutoEpisodio = minutosEpisodio;
     }
 
     @Override
-    public int getDuracaoMinutos(){
-        return temporadas * episodioTemporadas * minutosTemporadas;
+    public int getDuracaoMinutos() {
+        return temporadas * episodioTemporada * minutoEpisodio;
     }
-
+    @Override
+    public String toString() {
+        return "Série: " + getNome() + ", Temporadas: " + getTemporadas() + ", Minutos por temporada: " + getMinutosTemporada();
+    }
 }

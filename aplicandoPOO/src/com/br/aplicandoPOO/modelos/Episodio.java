@@ -7,7 +7,15 @@ public class Episodio implements ClassificavelInterface {
     private int numero;
     private String nome;
     private Serie serie;
-    private int totalVisualisacoes;
+    private int totalVisualizacoes;
+
+    public int getTotalVisualizacoes() {
+        return totalVisualizacoes;
+    }
+
+    public void setTotalVisualizacoes(int totalVisualizacoes) {
+        this.totalVisualizacoes = totalVisualizacoes;
+    }
 
     public int getNumero() {
         return numero;
@@ -33,19 +41,11 @@ public class Episodio implements ClassificavelInterface {
         this.serie = serie;
     }
 
-    public int getTotalVisualisacoes() {
-        return totalVisualisacoes;
-    }
-
-    public void setTotalVisualisacoes(int totalVisualisacoes) {
-        this.totalVisualisacoes = totalVisualisacoes;
-    }
-
     @Override
-    public int getClassificacaoFilme(){
-        if(totalVisualisacoes > 100){
+    public int getClassificacaoFilme() {
+        if (totalVisualizacoes > 100) {
             return 4;
-        } else{
+        } else {
             return 2;
         }
     }

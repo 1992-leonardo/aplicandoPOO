@@ -1,7 +1,6 @@
 package com.br.aplicandoPOO.modelos;
 
-
-public abstract class Titulo  {
+public class Titulo {
     private String nome;
     private int anoLancamento;
     private boolean incluidoPlano;
@@ -13,11 +12,11 @@ public abstract class Titulo  {
         return nome;
     }
 
-    public int getAnoDeLancamento() {
+    public int getAnoLancamento() {
         return anoLancamento;
     }
 
-    public boolean isIncluidoNoPlano() {
+    public boolean isIncluidoPlano() {
         return incluidoPlano;
     }
 

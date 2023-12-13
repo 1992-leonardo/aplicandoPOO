@@ -1,7 +1,6 @@
 package com.br.aplicandoPOO.calculos;
 public class FiltroRecomendacao {
     private String recomendacao;
-
     public void filtra(ClassificavelInterface classificavel) {
         if (classificavel.getClassificacaoFilme() >= 4) {
             System.out.println("Está entre os preferidos do momento");
